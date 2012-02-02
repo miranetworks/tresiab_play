@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, unittest, junitxml
+import os, sys, unittest, junitxml
 
 def main(argv=sys.argv):
     import test_fibonacci
@@ -14,7 +14,7 @@ def main(argv=sys.argv):
    # unittest.TextTestRunner(verbosity=2).run(alltests)
 
 
-    with open('output/test_fibonacci.xml', 'w') as test_output:
+    with open(os.path.join(os.path.dirname(__file__), 'output/test_fibonacci.xml'), 'w') as test_output:
         result = junitxml.JUnitXmlResult(test_output)
         result.startTestRun()
         suite = unittest.TestLoader().loadTestsFromTestCase(test_fibonacci.TestFibonacci)
