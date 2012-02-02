@@ -4,7 +4,7 @@ import sys
 import os
 import unittest
 
-sys.path.append('../src/')
+sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir, 'src'))
 
 import fibonacci
 
