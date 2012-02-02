@@ -33,6 +33,10 @@ class TestFibonacci(unittest.TestCase):
             'The fibonacci series for the number 30 is not as expected, shoud be:\n%s\nfound:\n%s' %\
             (expected_list, fib30))
 
+    def testFail(self):
+        self.assertTrue(False,
+            'It broke')
+
 #==================================================================================
 
 if __name__ == '__main__':
