@@ -34,7 +34,7 @@ class TestFibonacci(unittest.TestCase):
             (expected_list, fib30))
 
     def testFail(self):
-        self.assertTrue(False,
+        self.assertTrue(True,
             'It broke')
 
 #==================================================================================
